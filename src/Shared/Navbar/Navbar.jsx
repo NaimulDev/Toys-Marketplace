@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../../public/logo.jpg";
+
 import { AuthContext } from "../../Router/AuthProvider";
+import Header from "./Header";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -13,9 +14,10 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="py-5">
-      <div className="relative flex items-center justify-between">
-        <Link
+    <div className="">
+      <Header></Header>
+      <div className="relative ">
+        {/* <Link
           to="/"
           aria-label="toytown"
           title="Toy Town"
@@ -24,39 +26,40 @@ const Navbar = () => {
           <div className=" w-28 h-28 rounded-full ">
             <img src={logo} alt="" />
           </div>
-        </Link>
-        <ul className="items-center hidden space-x-8 lg:flex">
-          <li>
-            <NavLink
-              to="/"
-              aria-label="Home"
-              title="Home"
-              className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/alltoys"
-              aria-label="alltoys"
-              title="All Toys"
-              className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              All Toys
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/Blogs"
-              aria-label="blogs"
-              title="blogs"
-              className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              Blogs
-            </NavLink>
-          </li>
-          {/* <li>
+        </Link> */}
+        <div className="bg-[#09ccd0] text-white  flex items-center justify-between py-3">
+          <ul className="items-center hidden space-x-8 lg:flex font-bold">
+            <li>
+              <NavLink
+                to="/"
+                aria-label="Home"
+                title="Home"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/alltoys"
+                aria-label="alltoys"
+                title="All Toys"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                All Toys
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/Blogs"
+                aria-label="blogs"
+                title="blogs"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Blogs
+              </NavLink>
+            </li>
+            {/* <li>
             <NavLink
               to="/mytoys"
               aria-label="mytoys"
@@ -66,17 +69,17 @@ const Navbar = () => {
               My Toys
             </NavLink>
           </li> */}
-          <li>
-            <NavLink
-              to="/addtoys"
-              aria-label="addtoys"
-              title="addtoys"
-              className={({ isActive }) => (isActive ? "active" : "default")}
-            >
-              Add Toys
-            </NavLink>
-          </li>
-          {/* <li>
+            <li>
+              <NavLink
+                to="/addtoys"
+                aria-label="addtoys"
+                title="addtoys"
+                className={({ isActive }) => (isActive ? "active" : "default")}
+              >
+                Add Toys
+              </NavLink>
+            </li>
+            {/* <li>
             <Link to="/cart" aria-label="Cart" title="Cart">
               <div className="relative py-3">
                 <ShoppingCartIcon className="h-6 w-6 text-cyan-400" />
@@ -85,36 +88,39 @@ const Navbar = () => {
             </Link>
           </li> */}
 
-          <li>
-            {user ? (
-              <>
+            <li>
+              {user ? (
+                <>
+                  <NavLink
+                    to="/mytoys"
+                    aria-label="mytoys"
+                    title="mytoys"
+                    className={({ isActive }) =>
+                      isActive ? "active" : "default"
+                    }
+                  >
+                    My Toys
+                  </NavLink>
+
+                  <button className="ml-6" onClick={handleLogOut}>
+                    Logout
+                  </button>
+                </>
+              ) : (
                 <NavLink
-                  to="/mytoys"
-                  aria-label="mytoys"
-                  title="mytoys"
+                  to="/login"
+                  aria-label="login"
+                  title="Login"
                   className={({ isActive }) =>
                     isActive ? "active" : "default"
                   }
                 >
-                  My Toys
+                  Login
                 </NavLink>
-
-                <button className="ml-6" onClick={handleLogOut}>
-                  Logout
-                </button>
-              </>
-            ) : (
-              <NavLink
-                to="/login"
-                aria-label="login"
-                title="Login"
-                className={({ isActive }) => (isActive ? "active" : "default")}
-              >
-                Login
-              </NavLink>
-            )}
-          </li>
-        </ul>
+              )}
+            </li>
+          </ul>
+        </div>
         <div className="lg:hidden">
           <button
             aria-label="Open Menu"
