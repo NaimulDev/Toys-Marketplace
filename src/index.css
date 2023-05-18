@@ -7,11 +7,11 @@
 }
 
 .btn-primary {
-  @apply font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full border-transparent border-2  text-gray-700 hover:bg-cyan-400 bg-cyan-200;
+  @apply rounded-3xl font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-4 md:py-2 m-2 text-sm  border-transparent border-2  text-white hover:bg-cyan-400 bg-primary;
 }
 
 .active {
-  @apply font-medium tracking-wide text-green-600 transition-colors duration-200;
+  @apply font-medium tracking-wide  text-secondary transition-colors duration-200;
 }
 
 .product-container {

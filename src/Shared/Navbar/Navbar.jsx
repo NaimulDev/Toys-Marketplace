@@ -17,16 +17,6 @@ const Navbar = () => {
     <div className="">
       <Header></Header>
       <div className="relative ">
-        {/* <Link
-          to="/"
-          aria-label="toytown"
-          title="Toy Town"
-          className="inline-flex items-center"
-        >
-          <div className=" w-28 h-28 rounded-full ">
-            <img src={logo} alt="" />
-          </div>
-        </Link> */}
         <div className="bg-[#09ccd0] text-white  flex items-center justify-between py-3">
           <ul className="items-center hidden space-x-8 lg:flex font-bold">
             <li>
