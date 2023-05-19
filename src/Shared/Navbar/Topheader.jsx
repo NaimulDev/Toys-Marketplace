@@ -4,14 +4,15 @@ import TypeORM from "../../assets/banner/top.png";
 const Topheader = () => {
   return (
     <>
-      <div className="bg-black flex justify-between text-white px-24 ">
-        <div className="form-control">
+      <div className="bg-[#222222] flex flex-col md:flex-row justify-between text-white px-4 md:px-24">
+        <div className="form-control border-b-2 border-gray-700 mb-4 md:mb-0">
           <div className="input-group">
             <input
               type="text"
-              placeholder="Search…"
-              className="input input-bordered bg-black text-white border-white"
+              placeholder="Search Our Category"
+              className="input input-bordered bg-[#222222] text-white h-10"
             />
+            <h1 className="text-3xl font-light text-slate-500"> | </h1>
             <button className="text-white ml-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,20 +32,20 @@ const Topheader = () => {
           </div>
         </div>
         <div className="inline-flex">
-          <div className="form-control">
+          <div className="form-control mb-4 md:mb-0 md:mr-4">
             <div className="input-group">
-              <select className="select select-bordered bg-black text-white">
+              <select className="select select-bordered bg-[#222222] text-white">
                 <option disabled selected>
                   English
                 </option>
-                <option>Bangladesh </option>
+                <option>Bangladesh</option>
               </select>
             </div>
           </div>
 
-          <div className="form-control ">
-            <div className="input-group ">
-              <select className="select select-bordered bg-black text-white">
+          <div className="form-control mb-4 md:mb-0 md:mr-4">
+            <div className="input-group">
+              <select className="select select-bordered bg-[#222222] text-white">
                 <option disabled selected>
                   USD $
                 </option>
@@ -53,9 +54,9 @@ const Topheader = () => {
             </div>
           </div>
 
-          <div className="form-control ">
-            <div className="input-group ">
-              <select className="select select-bordered bg-black text-white">
+          <div className="form-control">
+            <div className="input-group">
+              <select className="select select-bordered bg-[#222222] text-white">
                 <option disabled selected>
                   Account
                 </option>

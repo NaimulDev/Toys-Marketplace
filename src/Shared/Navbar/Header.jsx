@@ -11,29 +11,31 @@ const Header = () => {
     <>
       <Topheader></Topheader>
       <div className="header-top">
-        <div className="flex justify-between ">
+        <div className="flex justify-between mx-4 md:mx-20">
           <Link
             to="/"
             aria-label="toytown"
             title="Toy Town"
             className="inline-flex items-center"
           >
-            <div className=" w-28 h-28 rounded-full ">
-              <img src={logo} alt="" />
+            <div className="rounded-full">
+              <img src={logo} alt="" className="w-full h-full" />
             </div>
           </Link>
-          <div className="flex">
-            <div className="flex mr-11">
-              <div>
-                <img src={img1} alt="" />
+          <div className="flex mt-3">
+            {/* style */}
+            <div className="flex mr-2 md:mr-11 cursor-pointer  flip-card">
+              <div className=" flip-card-inner ">
+                <img src={img1} alt="" className=" " />
               </div>
+
               <div className="ml-2">
-                <p className="font-bold">FREE DELIVERY</p>
+                <p className="font-bold ">FREE DELIVERY</p>
                 <p className="text-sm">Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
-            <div className="flex mr-14">
-              <div>
+            <div className="flex mr-2 md:mr-14 cursor-pointer flip-card">
+              <div className="flip-card-inner">
                 <img src={img2} alt="" />
               </div>
               <div className="ml-2">

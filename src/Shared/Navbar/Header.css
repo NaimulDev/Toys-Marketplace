@@ -5,3 +5,13 @@
   background-repeat: repeat-x;
   background-position: center -1px;
 }
+
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(380deg);
+}
