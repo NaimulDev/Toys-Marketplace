@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
 import { AuthContext } from "../../Router/AuthProvider";
 import useTitle from "../../useTitle";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -54,6 +55,9 @@ const Login = () => {
 
   return (
     <div className="max-w-md mx-auto mt-8">
+      <h1 className="text-2xl font-bold text-center my-5">
+        Log in to your account
+      </h1>
       <form
         onSubmit={handleLogin}
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
@@ -72,7 +76,7 @@ const Login = () => {
             placeholder="Email"
           />
         </div>
-        <div className="mb-4">
+        <div className="mb-4 relative">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
             htmlFor="password"
@@ -87,33 +91,23 @@ const Login = () => {
             name="password"
             required
           />
-          <p onClick={() => setShow(!show)}>
-            <small className="cursor-pointer">
-              {show ? <span>Hide Password</span> : <span>Show Password</span>}
+          <p className="absolute top-9 right-0" onClick={() => setShow(!show)}>
+            <small className="cursor-pointer  font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-4 md:py-1 m-1 text-sm  border-transparent border-2  text-white hover:bg-secondary bg-primary ">
+              {show ? <span>Hide</span> : <span>Show</span>}
             </small>
           </p>
         </div>
-        <div className="flex items-center justify-between">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
+        <div className=" justify-between text-center items-center">
+          <button className="btn-primary " type="submit">
             Sign In
           </button>
           <Toaster />
         </div>
       </form>
-      <div className="flex items-center justify-evenly mb-4">
-        <button
-          onClick={handleGoogle}
-          className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4  rounded focus:outline-none focus:shadow-outline"
-        >
-          SignIn Google
-        </button>
-      </div>
-      <p>
+      <SocialLogin />
+      <p className="text-center  my-6 text-xl">
         <small>
-          New to Mazaa? <Link to="/signup">Create New Account</Link>
+          <Link to="/signup">No account? Create one here</Link>
         </small>
       </p>
     </div>

@@ -14,7 +14,9 @@ const Banner = () => {
             className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 ml-16"
           >
             <h4 className="text-[#ff6f69] text-4xl ">Hot Trendy</h4>
-            <h1 className="text-6xl font-bold my-7">Baby Kids Cloth</h1>
+            <h1 className="text-6xl font-bold my-7 text-[#313131] ">
+              Baby Kids Cloth
+            </h1>
             <p className="text-sm font-bold text-slate-400 mb-4">
               Get Upto 30% Off On Your First Order
             </p>
@@ -37,7 +39,9 @@ const Banner = () => {
             className="absolute transform -translate-y-1/2  right-40 top-1/2 mr-16"
           >
             <h4 className="text-[#ff6f69] text-4xl ">Hot Trendy</h4>
-            <h1 className="text-6xl font-bold my-7">Baby Kids Cloth</h1>
+            <h1 className="text-6xl font-bold my-7 text-[#313131]">
+              Baby Kids Cloth
+            </h1>
             <p className="text-sm font-bold text-slate-400 mb-4">
               Get Upto 30% Off On Your First Order
             </p>
@@ -59,7 +63,9 @@ const Banner = () => {
             className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 ml-16"
           >
             <h4 className="text-[#ff6f69] text-4xl ">Hot Trendy</h4>
-            <h1 className="text-6xl font-bold my-7">Baby Kids Cloth</h1>
+            <h1 className="text-6xl font-bold my-7 text-[#313131]">
+              Baby Kids Cloth
+            </h1>
             <p className="text-sm font-bold text-slate-400 mb-4">
               Get Upto 30% Off On Your First Order
             </p>
@@ -81,7 +87,9 @@ const Banner = () => {
             className="absolute transform -translate-y-1/2  right-40 top-1/2 mr-16"
           >
             <h4 className="text-[#ff6f69] text-4xl ">Hot Trendy</h4>
-            <h1 className="text-6xl font-bold my-7">Baby Kids Cloth</h1>
+            <h1 className="text-6xl font-bold my-7 text-[#313131]">
+              Baby Kids Cloth
+            </h1>
             <p className="text-sm font-bold text-slate-400 mb-4">
               Get Upto 30% Off On Your First Order
             </p>

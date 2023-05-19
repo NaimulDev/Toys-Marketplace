@@ -18,7 +18,7 @@ const Navbar = () => {
       <Header></Header>
       <div className="relative ">
         <div className="bg-[#09ccd0] text-white  flex items-center justify-between py-3">
-          <ul className="items-center hidden space-x-8 lg:flex font-bold">
+          <ul className="items-center hidden space-x-8 lg:flex font-bold md:mx-20">
             <li>
               <NavLink
                 to="/"
