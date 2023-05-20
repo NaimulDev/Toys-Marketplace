@@ -11,7 +11,7 @@ const Banner = () => {
           <img src={slider1} className="w-full  " />
           <div
             data-aos="fade-down"
-            className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 ml-16"
+            className="absolute transform -translate-y-1/2 left-5 right-5 top-40 ml-16"
           >
             <h4 className="text-[#ff6f69] text-4xl ">Hot Trendy</h4>
             <h1 className="text-6xl font-bold my-7 text-[#313131] ">
@@ -36,7 +36,7 @@ const Banner = () => {
           <img src={slider2} className="w-full" />
           <div
             data-aos="fade-down"
-            className="absolute transform -translate-y-1/2  right-40 top-1/2 mr-16"
+            className="absolute transform -translate-y-1/2  right-40 top-40 mr-16"
           >
             <h4 className="text-[#ff6f69] text-4xl ">Hot Trendy</h4>
             <h1 className="text-6xl font-bold my-7 text-[#313131]">
@@ -47,7 +47,7 @@ const Banner = () => {
             </p>
             <button className=" btn-primary ">SHOP NOW</button>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-40">
             <a href="#slide1" className="btn btn-circle">
               ❮
             </a>
@@ -60,7 +60,7 @@ const Banner = () => {
           <img src={slider1} className="w-full" />
           <div
             data-aos="fade-down"
-            className="absolute transform -translate-y-1/2 left-5 right-5 top-1/2 ml-16"
+            className="absolute transform -translate-y-1/2 left-5 right-5 top-40 ml-16"
           >
             <h4 className="text-[#ff6f69] text-4xl ">Hot Trendy</h4>
             <h1 className="text-6xl font-bold my-7 text-[#313131]">
@@ -84,7 +84,7 @@ const Banner = () => {
           <img src={slider2} className="w-full" />
           <div
             data-aos="fade-down"
-            className="absolute transform -translate-y-1/2  right-40 top-1/2 mr-16"
+            className="absolute transform -translate-y-1/2  right-40 top-40 mr-16"
           >
             <h4 className="text-[#ff6f69] text-4xl ">Hot Trendy</h4>
             <h1 className="text-6xl font-bold my-7 text-[#313131]">

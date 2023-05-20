@@ -159,8 +159,8 @@ const Navbar = () => {
                   <div>
                     <Link
                       to="/"
-                      aria-label="HeroGadget"
-                      title="HeroGadget"
+                      aria-label="ToyTown"
+                      title="ToyTown"
                       className="inline-flex items-center"
                     >
                       <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-200">
@@ -174,7 +174,7 @@ const Navbar = () => {
                         </svg>
                       </div>
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        HG
+                        TT
                       </span>
                     </Link>
                   </div>
@@ -198,57 +198,34 @@ const Navbar = () => {
                   <ul className="space-y-4">
                     <li>
                       <Link
-                        to="/about"
-                        aria-label="about"
-                        title="About"
+                        to="/alltoys"
+                        aria-label="AllToys"
+                        title="AllToys"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        About
+                        All Toys
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link
-                        to="/cart"
-                        aria-label="Cart"
-                        title="Cart"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        <div className="relative py-3">
-                          <ShoppingCartIcon className="h-6 w-6 text-cyan-400" />
-                          <p className="absolute bottom-5 left-6">
-                            {cart.length}
-                          </p>
-                        </div>
-                      </Link>
-                    </li> */}
+
                     <li>
                       <Link
-                        to="/services"
-                        aria-label="services"
-                        title="services"
+                        to="/blogs"
+                        aria-label="Blogs"
+                        title="Blogs"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Services
+                        Blogs
                       </Link>
                     </li>
+
                     <li>
                       <Link
-                        to="/blog"
-                        aria-label="blog"
-                        title="blog"
+                        to="/login"
+                        aria-label="Login"
+                        title="Login"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/contact"
-                        aria-label="contact"
-                        title="contact"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Contact
+                        Login
                       </Link>
                     </li>
                   </ul>

@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <>
       <Topheader></Topheader>
-      <div className="header-top">
+      <div className="header-top ">
         <div className="flex justify-between mx-4 md:mx-20">
           <Link
             to="/"
