@@ -1,5 +1,4 @@
 import React from "react";
-import TypeORM from "../../assets/banner/top.png";
 
 const Topheader = () => {
   return (
@@ -35,9 +34,7 @@ const Topheader = () => {
           <div className="form-control mb-4 md:mb-0 md:mr-4">
             <div className="input-group">
               <select className="select select-bordered bg-[#222222] text-white">
-                <option disabled selected>
-                  English
-                </option>
+                <option>English</option>
                 <option>Bangladesh</option>
               </select>
             </div>
@@ -45,19 +42,23 @@ const Topheader = () => {
 
           <div className="form-control mb-4 md:mb-0 md:mr-4">
             <div className="input-group">
-              <select className="select select-bordered bg-[#222222] text-white">
-                <option disabled selected>
-                  USD $
-                </option>
-                <option>BDT</option>
+              <select
+                className="select select-bordered bg-[#222222] text-white"
+                defaultValue="option1"
+              >
+                <option value="option1">USD $</option>
+                <option value="option2">BDT</option>
               </select>
             </div>
           </div>
 
           <div className="form-control">
             <div className="input-group">
-              <select className="select select-bordered bg-[#222222] text-white">
-                <option disabled selected>
+              <select
+                className="select select-bordered bg-[#222222] text-white"
+                defaultValue="option1"
+              >
+                <option value="option1" disabled>
                   Account
                 </option>
               </select>

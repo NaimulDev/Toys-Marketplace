@@ -30,11 +30,12 @@ const KidsGallery = () => {
           </div>
         ))}
       </div>
-      {/* Marque */}
 
-      <Marquee className="my-24 ">
-        <LogoMarquee></LogoMarquee>
-      </Marquee>
+      <div className="px-20">
+        <Marquee className="my-24">
+          <LogoMarquee></LogoMarquee>
+        </Marquee>
+      </div>
     </>
   );
 };

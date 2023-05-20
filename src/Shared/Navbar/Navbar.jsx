@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
 import { AuthContext } from "../../Router/AuthProvider";
 import Header from "./Header";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleLogOut = () => {
     logOut()
@@ -17,12 +18,13 @@ const Navbar = () => {
     <div className="">
       <Header></Header>
       <div className="relative ">
-        <div className="bg-[#09ccd0] text-white  flex items-center justify-between py-3">
-          <ul className="items-center hidden space-x-8 lg:flex font-bold md:mx-20">
+        <div className="bg-[#09ccd0] text-white  flex items-center justify-between py-2">
+          <ul className="nav-ul items-center hidden  lg:flex font-bold md:mx-20">
             <li>
               <NavLink
+                id="nav"
                 to="/"
-                aria-label="Home"
+                aria-label="home"
                 title="Home"
                 className={({ isActive }) => (isActive ? "active" : "default")}
               >
@@ -31,6 +33,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+                id="nav"
                 to="/alltoys"
                 aria-label="alltoys"
                 title="All Toys"
@@ -41,6 +44,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+                id="nav"
                 to="/Blogs"
                 aria-label="blogs"
                 title="blogs"
@@ -62,6 +66,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/addtoys"
+                id="nav"
                 aria-label="addtoys"
                 title="addtoys"
                 className={({ isActive }) => (isActive ? "active" : "default")}
@@ -69,19 +74,12 @@ const Navbar = () => {
                 Add Toys
               </NavLink>
             </li>
-            {/* <li>
-            <Link to="/cart" aria-label="Cart" title="Cart">
-              <div className="relative py-3">
-                <ShoppingCartIcon className="h-6 w-6 text-cyan-400" />
-                <p className="absolute bottom-5 left-6">{cart.length}</p>
-              </div>
-            </Link>
-          </li> */}
 
-            <li>
+            <li className="flex ">
               {user ? (
                 <>
                   <NavLink
+                    id="nav"
                     to="/mytoys"
                     aria-label="mytoys"
                     title="mytoys"
@@ -92,12 +90,33 @@ const Navbar = () => {
                     My Toys
                   </NavLink>
 
-                  <button className="ml-6" onClick={handleLogOut}>
+                  <button id="nav" className="" onClick={handleLogOut}>
                     Logout
                   </button>
+                  <div className=" flex ml-60">
+                    <p className="bg-secondary rounded-2xl py-2 px-3 mr-4">
+                      {user?.email}
+                    </p>
+
+                    <div className="avatar cursor-pointer">
+                      <div
+                        className="w-10 h-10 rounded-full relative ring ring-primary ring-offset-base-100 ring-offset-2"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                      >
+                        <img src={user?.photoURL} alt="User Avatar" />
+                        {isHovered && (
+                          <span className="absolute top-1 text-xs">
+                            {user?.displayName}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </>
               ) : (
                 <NavLink
+                  id="nav"
                   to="/login"
                   aria-label="login"
                   title="Login"

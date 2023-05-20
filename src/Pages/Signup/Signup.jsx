@@ -40,6 +40,7 @@ const Signup = () => {
         form.reset();
         navigate(from, { replace: true });
         toast.success("Successfully toasted!");
+
         // alert("successfully create");
       })
       .catch((error) => {
