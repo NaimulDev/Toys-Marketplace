@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 
-const Girls = ({ car }) => {
-  const { _id, img, name, price, rating } = car;
+const Girls = ({ girl }) => {
+  const { _id, img, name, price, rating } = girl;
   return (
     <div>
       <div
@@ -11,7 +11,7 @@ const Girls = ({ car }) => {
         className="card md:w-96 mx-3 h-fit bg-base-100 shadow-xl"
       >
         <figure>
-          <img src={img} alt="robot" className="md:h-72" />
+          <img src={img} alt="toys" className="md:h-72" />
         </figure>
         <div className="card-body">
           <h2 className="card-title sub_title">{name}</h2>
@@ -20,11 +20,14 @@ const Girls = ({ car }) => {
               Price: <span className="text-3xl">${price}</span>
             </small>
           </p>
-          <div className="flex">
+          <div className="flex items-center">
+            {" "}
+            {/* Added flex and items-center */}
             <p className="sub_desc">
-              <small className="">
+              <small>
                 Rating:
                 <Rating
+                  className="ml-1" // Added Tailwind CSS marginLeft class
                   style={{ maxWidth: 25 }}
                   value={Math.round(rating || 0)}
                   readOnly

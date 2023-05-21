@@ -14,8 +14,8 @@ const SoftToys = () => {
   return (
     <div>
       <div className="grid md:grid-cols-3 gap-10">
-        {softToys.map((car) => (
-          <Soft key={car._id} car={car}></Soft>
+        {softToys.map((soft) => (
+          <Soft key={soft._id} soft={soft}></Soft>
         ))}
       </div>
     </div>

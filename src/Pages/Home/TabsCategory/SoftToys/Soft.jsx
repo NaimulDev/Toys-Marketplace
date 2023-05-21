@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 
-const Soft = ({ car }) => {
-  const { _id, img, name, price, rating } = car;
+const Soft = ({ soft }) => {
+  const { _id, img, name, price, rating } = soft;
   return (
     <div>
       <div

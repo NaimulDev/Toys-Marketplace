@@ -13,8 +13,8 @@ const RubberwoodToys = () => {
   return (
     <div>
       <div className="grid md:grid-cols-3 gap-10">
-        {rubberToys.map((car) => (
-          <Rubberwood key={car._id} car={car}></Rubberwood>
+        {rubberToys.map((rubber) => (
+          <Rubberwood key={rubber._id} rubber={rubber}></Rubberwood>
         ))}
       </div>
     </div>

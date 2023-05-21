@@ -13,8 +13,8 @@ const GirlsCloth = () => {
   return (
     <div>
       <div className="grid md:grid-cols-3 gap-10">
-        {girlsCloth.map((car) => (
-          <Girls key={car._id} car={car}></Girls>
+        {girlsCloth.map((girl) => (
+          <Girls key={girl._id} girl={girl}></Girls>
         ))}
       </div>
     </div>
