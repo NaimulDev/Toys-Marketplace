@@ -9,6 +9,9 @@ import Signup from "../Pages/Signup/Signup";
 import Addtoys from "../Pages/Addtoys/Addtoys";
 import Mytoys from "../Pages/Mytoys/Mytoys";
 import Information from "../Pages/AllToys/Information";
+import Dynamic from "../Pages/Home/TabsCategory/Dynamic";
+import UpdateToys from "../Pages/Mytoys/UpdateToys";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -30,17 +33,40 @@ const router = createBrowserRouter([
       },
       {
         path: "/info/:id",
-        element: <Information />,
+        element: (
+          <PrivateRoute>
+            <Information />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(
+            `https://toy-marketplace-server-dusky-eight.vercel.app/toyProducts/${params.id}`
+          ),
       },
       {
+        path: "/updatetoy/:id",
+        element: <UpdateToys />,
+        loader: ({ params }) =>
+          fetch(
+            `https://toy-marketplace-server-dusky-eight.vercel.app/toyProducts/${params.id}`
+          ),
+      },
+
+      {
         path: "/addtoys",
-        element: <Addtoys />,
+        element: (
+          <PrivateRoute>
+            <Addtoys />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/mytoys",
-        element: <Mytoys />,
+        element: (
+          <PrivateRoute>
+            <Mytoys />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

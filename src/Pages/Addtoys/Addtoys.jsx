@@ -6,8 +6,8 @@ const Addtoys = () => {
     event.preventDefault();
 
     const form = event.target;
-    const photo = form.photo.value;
-    const toyName = form.toyName.value;
+    const img = form.img.value;
+    const name = form.name.value;
     const sellerName = form.sellerName.value;
     const email = form.email.value;
     const category = form.category.value;
@@ -16,8 +16,8 @@ const Addtoys = () => {
     const quantity = form.quantity.value;
     const details = form.details.value;
     const addToys = {
-      photo,
-      toyName,
+      img,
+      name,
       sellerName,
       email,
       category,
@@ -26,9 +26,9 @@ const Addtoys = () => {
       quantity,
       details,
     };
-    // console.log(addToys);
+    console.log(addToys);
 
-    fetch("http://localhost:5000/toys", {
+    fetch("https://toy-marketplace-server-dusky-eight.vercel.app/toyProducts", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -66,7 +66,7 @@ const Addtoys = () => {
               <label className="input-group">
                 <input
                   type="url"
-                  name="photo"
+                  name="img"
                   placeholder="Picture URL of the toy"
                   className="input input-bordered w-full"
                 />
@@ -81,7 +81,7 @@ const Addtoys = () => {
               <label className="input-group">
                 <input
                   type="text"
-                  name="toyName"
+                  name="name"
                   placeholder="Enter Your Name"
                   className="input input-bordered w-full"
                 />
@@ -144,7 +144,7 @@ const Addtoys = () => {
                 <input
                   type="text"
                   name="price"
-                  placeholder="Price"
+                  placeholder="price"
                   className="input input-bordered w-full"
                 />
               </label>

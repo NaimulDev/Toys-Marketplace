@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SingleMyToy from "./SingleMyToy";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Router/AuthProvider";
 
 const Mytoys = () => {
+  const { user } = useContext(AuthContext);
   const [myToy, setMyToy] = useState([]);
 
-  const url = "http://localhost:5000/toys";
+  const url = `https://toy-marketplace-server-dusky-eight.vercel.app/toyProducts?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -17,9 +19,12 @@ const Mytoys = () => {
   const handleDelete = (_id) => {
     const click = confirm("Are you sure you want to delete");
     if (click) {
-      fetch(`http://localhost:5000/toys/${_id}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `https://toy-marketplace-server-dusky-eight.vercel.app/toyProducts/${_id}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount === 1) {
@@ -53,7 +58,7 @@ const Mytoys = () => {
           <tbody>
             {myToy.map((mt) => (
               <SingleMyToy
-                key={mt._Id}
+                key={mt._id}
                 mt={mt}
                 setMyToy={setMyToy}
                 handleDelete={handleDelete}
