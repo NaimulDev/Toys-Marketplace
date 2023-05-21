@@ -28,11 +28,12 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-
+  // logout
   const logOut = () => {
     return signOut(auth);
   };
 
+  // google Sign IN
   const googleProvider = new GoogleAuthProvider();
 
   const googleSignIn = () => {
