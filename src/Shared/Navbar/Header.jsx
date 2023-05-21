@@ -23,7 +23,6 @@ const Header = () => {
             </div>
           </Link>
           <div className="flex mt-3">
-            {/* style */}
             <div className="flex mr-2 md:mr-11 cursor-pointer  flip-card">
               <div className=" flip-card-inner ">
                 <img src={img1} alt="" className=" " />
