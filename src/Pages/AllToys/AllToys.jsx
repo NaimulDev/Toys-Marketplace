@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ToyRow from "./ToyRow";
+import useTitle from "../../useTitle";
 
 const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [data, setData] = useState([]);
   const [showAll, setShowAll] = useState([false]);
+  useTitle("All Toys");
   const handleShowAll = () => {
     setShowAll(true);
   };
@@ -34,14 +36,14 @@ const AllToys = () => {
       "https://toy-marketplace-server-dusky-eight.vercel.app/ascendingPrice"
     )
       .then((res) => res.json())
-      .then((data) => setRobotToys(data));
+      .then((data) => setToys(data));
   };
   const handlerDescending = () => {
     fetch(
       "https://toy-marketplace-server-dusky-eight.vercel.app/descendingPrice"
     )
       .then((res) => res.json())
-      .then((data) => setRobotToys(data));
+      .then((data) => setToys(data));
   };
   return (
     <div className="max-w-6xl mx-auto my-12">

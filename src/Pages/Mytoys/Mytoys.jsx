@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import SingleMyToy from "./SingleMyToy";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Router/AuthProvider";
+import useTitle from "../../useTitle";
 
 const Mytoys = () => {
   const { user } = useContext(AuthContext);
   const [myToy, setMyToy] = useState([]);
-
+  useTitle("MyToys");
   const url = `https://toy-marketplace-server-dusky-eight.vercel.app/toyProducts?email=${user?.email}`;
   useEffect(() => {
     fetch(url)

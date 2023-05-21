@@ -3,7 +3,7 @@ import logo from "../../assets/logo/logo.png";
 
 const Logo = () => {
   return (
-    <div className="flex justify-center items-center mt-36 mb-20">
+    <div className="flex justify-center items-center my-6 md:mt-36 md:mb-20">
       <div className="border-t-2 border-b-2 border-gray-500 flex items-center">
         <div className="border-r-2 border-gray-500">
           <img src={logo} alt="Logo" className="rounded-full" />

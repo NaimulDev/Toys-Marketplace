@@ -106,7 +106,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 ">
-        <img src={overlay} alt="" className="h-[100px] w-full" />
+        <img src={overlay} alt="" className="md:h-[100px] w-full" />
       </div>
     </div>
   );

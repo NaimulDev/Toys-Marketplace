@@ -43,68 +43,6 @@ const UpdateToys = () => {
       });
   };
   return (
-    // <div>
-    //   <form onSubmit={handleUpdateToy}>
-    //     <div className="form-control items-center">
-    //       <div className=" ">
-    //         <label className="label">
-    //           <span className="label-text">Enter amount</span>
-    //         </label>
-    //         <label className="input-group my-6">
-    //           <span>Price</span>
-    //           <input
-    //             type="text"
-    //             name="price"
-    //             defaultValue={price}
-    //             placeholder="10"
-    //             className="input input-bordered"
-    //           />
-    //           <span>USD</span>
-    //         </label>
-    //       </div>
-
-    //       <div className="mb-4">
-    //         <label className="">
-    //           <h5>quantity</h5>
-    //         </label>
-
-    //         <label>
-    //           <input
-    //             type="text"
-    //             name="quantity"
-    //             defaultValue={quantity}
-    //             placeholder="Type here"
-    //             className="input input-bordered w-full "
-    //           />
-    //         </label>
-    //       </div>
-    //       <div className="mb-4 relative">
-    //         <label>
-    //           <h5>Description</h5>
-    //         </label>
-    //         <label>
-    //           <textarea
-    //             placeholder="Bio"
-    //             name="details"
-    //             defaultValue={details}
-    //             className="textarea textarea-bordered textarea-sm w-full max-w-xs"
-    //           ></textarea>
-    //         </label>
-    //       </div>
-
-    //       <button
-    //         className="bg-primary rounded-xl py-1 w-full"
-    //         type="submit"
-    //         value="update Toy"
-    //       >
-    //         update Toy
-    //       </button>
-    //     </div>
-    //   </form>
-    // </div>
-
-    // ==============
-
     <div className="text-center">
       <h1 className="text-3xl text-slate-950 font-bold mb-5">Update Toys</h1>
 
@@ -170,38 +108,7 @@ const UpdateToys = () => {
             </label>
           </div>
         </div>
-        {/* 3 */}
-        {/* <div className="flex flex-col gap-5 lg:flex-row">
-          <div className="form-control lg:w-1/2">
-            <label className="label">
-              <span className="label-text">Category</span>
-            </label>
-            <label className="input-group input-group-vertical">
-              <input
-                type="text"
-                name="category"
-                defaultValue={category}
-                placeholder="Enter coffee category"
-                className="input input-bordered"
-              />
-            </label>
-          </div>
-          <div className="form-control lg:w-1/2">
-            <label className="label">
-              <span className="label-text">Details</span>
-            </label>
-            <label className="input-group input-group-vertical">
-              <input
-                type="text"
-                name="details"
-                defaultValue={details}
-                placeholder="Enter coffee details"
-                className="input input-bordered"
-              />
-            </label>
-          </div>
-        </div> */}
-        {/* photo */}
+
         <div className="form-control w-full ">
           <label className="label">
             <span className="label-text">details</span>
