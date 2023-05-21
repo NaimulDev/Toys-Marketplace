@@ -9,7 +9,7 @@ import Signup from "../Pages/Signup/Signup";
 import Addtoys from "../Pages/Addtoys/Addtoys";
 import Mytoys from "../Pages/Mytoys/Mytoys";
 import Information from "../Pages/AllToys/Information";
-import Dynamic from "../Pages/Home/TabsCategory/Dynamic";
+
 import UpdateToys from "../Pages/Mytoys/UpdateToys";
 import PrivateRoute from "./PrivateRoute";
 

@@ -6,7 +6,6 @@ const RubberwoodToys = () => {
   const [rubberToys, setRubberwood] = useState([]);
 
   useEffect(() => {
-    // fetch('https://y-pearl-eight.vercel.app/carRobot')
     fetch("https://toy-marketplace-server-dusky-eight.vercel.app/rubberwood")
       .then((res) => res.json())
       .then((data) => setRubberwood(data));

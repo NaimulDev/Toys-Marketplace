@@ -3,18 +3,17 @@ import { useEffect, useState } from "react";
 import Girls from "./Girls";
 
 const GirlsCloth = () => {
-  const [carRobot, setCarRobot] = useState([]);
+  const [girlsCloth, setGirlsCloth] = useState([]);
 
   useEffect(() => {
-    // fetch('https://y-pearl-eight.vercel.app/carRobot')
     fetch("https://toy-marketplace-server-dusky-eight.vercel.app/girlsCloth")
       .then((res) => res.json())
-      .then((data) => setCarRobot(data));
+      .then((data) => setGirlsCloth(data));
   }, []);
   return (
     <div>
       <div className="grid md:grid-cols-3 gap-10">
-        {carRobot.map((car) => (
+        {girlsCloth.map((car) => (
           <Girls key={car._id} car={car}></Girls>
         ))}
       </div>
