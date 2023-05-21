@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const UpdateToys = () => {
   const toys = useLoaderData();
-  const { name, quantity, price, category, details } = toys;
+  const { quantity, price, details } = toys;
   const { _id } = toys;
   const handleUpdateToy = (event) => {
     event.preventDefault();
@@ -17,7 +17,6 @@ const UpdateToys = () => {
       quantity,
       details,
     };
-    console.log(newToy);
 
     fetch(
       `https://toy-marketplace-server-dusky-eight.vercel.app/toyProducts/${_id}`,
@@ -34,96 +33,73 @@ const UpdateToys = () => {
         console.log(data);
         if (data.modifiedCount > 0) {
           Swal.fire({
-            title: "success!",
-            text: "Coffee Update Successfully ",
+            title: "Success!",
+            text: "Toy Updated Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
         }
       });
   };
+
   return (
     <div className="text-center">
       <h1 className="text-3xl text-slate-950 font-bold mb-5">Update Toys</h1>
 
       <form onSubmit={handleUpdateToy} className="mx-auto lg:w-2/3">
         <div className="flex flex-col gap-5 lg:flex-row">
-          <div className="form-control lg:w-1/2">
+          <div className="form-control w-full lg:w-1/2">
             <label className="label">
-              <span className="label-text">Coffee Name</span>
-            </label>
-            <label className="input-group input-group-vertical">
-              <input
-                type="text"
-                name="name"
-                defaultValue={name}
-                placeholder=" Name"
-                className="input input-bordered"
-              />
-            </label>
-          </div>
-          <div className="form-control lg:w-1/2">
-            <label className="label">
-              <span className="label-text">Chef</span>
+              <span className="label-text">Quantity</span>
             </label>
             <label className="input-group input-group-vertical">
               <input
                 type="text"
                 name="quantity"
                 defaultValue={quantity}
-                placeholder="quantity"
+                placeholder="Quantity"
                 className="input input-bordered"
               />
             </label>
           </div>
-        </div>
-        {/* 2 */}
-        <div className="flex flex-col gap-5 lg:flex-row">
-          <div className="form-control lg:w-1/2">
+
+          <div className="form-control w-full lg:w-1/2">
             <label className="label">
-              <span className="label-text">price</span>
+              <span className="label-text">Price</span>
             </label>
             <label className="input-group input-group-vertical">
               <input
                 type="text"
                 name="price"
                 defaultValue={price}
-                placeholder=" price"
-                className="input input-bordered"
-              />
-            </label>
-          </div>
-          <div className="form-control lg:w-1/2">
-            <label className="label">
-              <span className="label-text">Taste</span>
-            </label>
-            <label className="input-group input-group-vertical">
-              <input
-                type="text"
-                name="category"
-                defaultValue={category}
-                placeholder="category"
+                placeholder="Price"
                 className="input input-bordered"
               />
             </label>
           </div>
         </div>
 
-        <div className="form-control w-full ">
+        <div className="form-control w-full">
           <label className="label">
-            <span className="label-text">details</span>
+            <span className="label-text">Desciption</span>
           </label>
           <label className="input-group input-group-vertical">
-            <input
-              type="text"
-              defaultValue={details}
+            <textarea
               name="details"
-              placeholder="details"
-              className="input input-bordered"
-            />
+              defaultValue={details}
+              id="Details"
+              cols="70"
+              rows="5"
+              className="border"
+            ></textarea>
           </label>
         </div>
-        <input type="submit" value="Update Coffee" className="btn  w-full" />
+
+        <input
+          type="submit"
+          value="Update Toy"
+          className="btn bg-primary hover:bg-secondary w-full mt-6"
+        />
       </form>
     </div>
   );

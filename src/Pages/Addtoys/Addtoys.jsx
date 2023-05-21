@@ -28,7 +28,6 @@ const Addtoys = () => {
       quantity,
       details,
     };
-    console.log(addToys);
 
     fetch("https://toy-marketplace-server-dusky-eight.vercel.app/toyProducts", {
       method: "POST",
@@ -39,7 +38,6 @@ const Addtoys = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
@@ -47,7 +45,7 @@ const Addtoys = () => {
             icon: "success",
             confirmButtonText: "Ok",
           });
-          // form.reset();
+          form.reset();
         }
       });
   };

@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 const Information = () => {
   const detail = useLoaderData();
-  // console.log(detail);
+
   const { img, email, price, toyName, sellerName, quantity, rating, details } =
     detail;
   return (
