@@ -12,7 +12,7 @@ const GirlsCloth = () => {
   }, []);
   return (
     <div>
-      <div className="grid md:grid-cols-3 gap-10">
+      <div className="grid md:grid-cols-3 gap-3 md:mx-14">
         {girlsCloth.map((girl) => (
           <Girls key={girl._id} girl={girl}></Girls>
         ))}
